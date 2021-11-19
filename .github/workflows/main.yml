@@ -15,11 +15,9 @@ jobs:
         with:
           distribution: 'zulu'
           java-version: '11'
-      - name: Change wrapper permissions
+      - name: Make Gradle executable
         run: chmod +x ./gradlew
-      - name: Build with Gradle
-        run: ./gradlew build
-      - name: build release 
+      - name: Build Release APK
         run: ./gradlew assembleRelease
       - name: upload artifact to Firebase App Distribution
         uses: wzieba/Firebase-Distribution-Github-Action@v1
