@@ -13,7 +13,7 @@ jobs:
       - name: Setup Java JDK
         uses: actions/setup-java@v2.3.1
         with:
-          distribution: 'zulu'
+          distribution: 'temurin'
           java-version: '11'
       - name: Make Gradle executable
         run: chmod +x ./gradlew
@@ -28,4 +28,4 @@ jobs:
           token: ${{secrets.FIREBASE_TOKEN}}
           groups: Debug
           releaseNotes: release function
-          file: app/build/outputs/apk/release/app-release.apk
+          file: app/build/outputs/apk/release/app-release-unsigned.apk
