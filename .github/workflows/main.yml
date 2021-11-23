@@ -19,7 +19,7 @@ jobs:
         run: chmod +x ./gradlew
       - name: Build Release APK
         run: ./gradlew assembleRelease
-      - name: List files
+      - name: List Files
         run: ls -lrt app/build/outputs/apk/release
       - name: Upload file to Firebase App Distribution
         uses: wzieba/Firebase-Distribution-Github-Action@v1
